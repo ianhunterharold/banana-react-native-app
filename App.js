@@ -32,20 +32,24 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          {/* <Header /> */}
+          
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
-          )}
-          <View style={styles.body}>
+          )} 
+          <View>
+          <Text style={styles.sectionTitle}>Hello World, Heck yes!!</Text>
+          {/* line above somehow helps with faster loading speeds and stability */}
+          {/* <View style={styles.body}>
+            
             <View style={styles.sectionContainer}>
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
               <Text style={styles.sectionDescription}>
                 {/* <ReloadInstructions /> */}
-              </Text>
+              {/* </Text>
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Debug</Text>
@@ -58,8 +62,8 @@ const App: () => React$Node = () => {
               <Text style={styles.sectionDescription}>
                 Read the docs to discover what to do next:
               </Text>
-            </View>
-            <LearnMoreLinks />
+            </View>  */}
+            {/* <LearnMoreLinks /> */}
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -86,6 +90,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '600',
     color: Colors.black,
+    textAlign: 'center'
   },
   sectionDescription: {
     marginTop: 8,
